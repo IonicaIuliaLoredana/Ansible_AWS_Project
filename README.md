@@ -1,26 +1,5 @@
-
-
-## Playbooks
-### Create Playbook
-Playbook to create the Kubernetes single node cluster with Docker.
-
-*Command to execute from the Infrastructure folder:*
-```
-ansible-playbook create-playboook.yml -i inventory/hosts
-```
-
-### Deploy Application Playbook
-Playbook to deploy the application and the database .
-
-*Command to execute from the Infrastructure folder:*
-```
-ansible-playbook deploy-application-playboook.yml -i inventory/hosts
-
-```
-
-
-
-    The project's purpose is to deploy the ToDo Application using Ansible.
+   
+The project's purpose is to deploy the ToDo Application using Ansible.
 
 The steps prior to the deployment are the following:
 
@@ -66,3 +45,29 @@ This playbook contains the roles:
  - the namespace for both the application and the database ( namespace ) (They share this variable beacause they are in the same namespace)
  - the name of the containers for mysql ( mysql_container_name ) and for the application ( app_container_name )
 
+
+Link to running Application: http://k8s-app-appingre-b00c350a75-1114329055.eu-north-1.elb.amazonaws.com/
+
+
+## Playbooks
+### Create Playbook 
+
+Playbook to create the Kubernetes single node cluster with Docker.
+
+*Command to execute from the Infrastructure folder:*
+```
+ansible-playbook create-playboook.yml -i inventory/hosts
+```
+
+### Deploy Application Playbook
+Playbook to deploy the application and the database .
+
+*Command to execute from the Infrastructure folder:*
+```
+ansible-playbook deploy-application-playboook.yml -i inventory/hosts
+
+```
+
+
+
+ 
