@@ -1,0 +1,6 @@
+---
+- hosts: cluster
+  roles:
+  - deploy-app-and-db
+  - deploy-nginx  # deploys ingress-nginx controller
+  - deploy-ingress # deploys ingress controller

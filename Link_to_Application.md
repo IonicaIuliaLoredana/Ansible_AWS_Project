@@ -1,0 +1,1 @@
+http://k8s-app-appingre-b00c350a75-1114329055.eu-north-1.elb.amazonaws.com/

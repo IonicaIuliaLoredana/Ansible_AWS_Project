@@ -1,0 +1,6 @@
+---
+- name: Deploy Application
+  command: kubectl apply -f app-deployment.yml\
+  
+- name: Deploy Database
+  command: kubectl apply -f app-deployment.yml

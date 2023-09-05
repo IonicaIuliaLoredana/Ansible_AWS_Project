@@ -1,0 +1,4 @@
+---
+
+- name: Deploy Ingress
+  command: kubectl apply -f http-ingress-deployment.yml

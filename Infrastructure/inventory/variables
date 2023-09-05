@@ -1,0 +1,7 @@
+vars:
+  namespace: staging
+  app_nr_of_replicas: 2
+  db_nr_of_replicas: 2
+  mysql_container_name: mysql_staging
+  app_container_name: app_staging
+ 

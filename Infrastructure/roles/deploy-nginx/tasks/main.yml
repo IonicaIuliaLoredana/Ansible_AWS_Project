@@ -1,0 +1,4 @@
+---
+
+- name: Deploy Nginx
+  command: kubectl apply -f nginx-ngress-deployment.yml

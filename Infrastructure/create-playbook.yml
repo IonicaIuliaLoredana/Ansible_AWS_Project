@@ -1,0 +1,26 @@
+---
+
+- hosts: cluster
+  tasks:
+  - name: Disable Swap
+    command: swapoff -a
+    
+
+- hosts: cluster
+  roles:
+  - delete-docker     # Used to delete old instances
+  - install-docker    # Install Docker Engine
+
+
+## - Set-up the cluster & master node
+- hosts: cluster
+  roles:
+  - install-k8s
+  - k8s-cluster
+  - install-calico    # For the Network Interface
+
+## - Untaint master node to have the single node cluster
+- hosts: cluster
+  tasks:
+  - name: untaint master node
+    command: kubectl taint nodes --all node-role.kubernetes.io/master-
